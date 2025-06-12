@@ -1,0 +1,33 @@
+{
+  "title": "Who We Serve",
+  "subtitle": "Tailored solutions for every career stage",
+  "services": [
+    {
+      "id": 1,
+      "title": " Professionals",
+      "description": "",
+      "image": {
+        "light": "/images/home/Aspire.jpg",
+        "dark": "/images/f_01_dark.png"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Students & Freshers",
+      "description": "",
+      "image": {
+        "light": "/images/home/Students.jpg",
+        "dark": "/images/f_05_dark.png"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Career Enthusiasts",
+      "description": "",
+      "image": {
+        "light": "/images/home/Carreer.jpg",
+        "dark": "/images/f_02_dark.png"
+      }
+    }
+  ]
+}

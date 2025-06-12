@@ -1,0 +1,130 @@
+{
+  "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/error.css",
+      "static/chunks/app/error.js"
+    ],
+    "/(public)/signin/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(public)/signin/page.css",
+      "static/chunks/app/(public)/signin/page.js"
+    ],
+    "/(public)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(public)/layout.css",
+      "static/chunks/app/(public)/layout.js"
+    ],
+    "/(private)/u/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(private)/u/page.js"
+    ],
+    "/(private)/u/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(private)/u/layout.css",
+      "static/chunks/app/(private)/u/layout.js"
+    ],
+    "/(private)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(private)/layout.css",
+      "static/chunks/app/(private)/layout.js"
+    ],
+    "/(private)/admin/(protected)/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(private)/admin/(protected)/page.js"
+    ],
+    "/(private)/admin/(protected)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(private)/admin/(protected)/layout.css",
+      "static/chunks/app/(private)/admin/(protected)/layout.js"
+    ],
+    "/(private)/admin/(protected)/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(private)/admin/(protected)/dashboard/page.js"
+    ],
+    "/(private)/admin/(protected)/coach/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(private)/admin/(protected)/coach/page.css",
+      "static/chunks/app/(private)/admin/(protected)/coach/page.js"
+    ],
+    "/(private)/u/program/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(private)/u/program/page.css",
+      "static/chunks/app/(private)/u/program/page.js"
+    ],
+    "/(private)/u/program/[programId]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(private)/u/program/[programId]/page.css",
+      "static/chunks/app/(private)/u/program/[programId]/page.js"
+    ],
+    "/(private)/coach/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(private)/coach/page.js"
+    ],
+    "/(private)/coach/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(private)/coach/layout.css",
+      "static/chunks/app/(private)/coach/layout.js"
+    ],
+    "/(private)/coach/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(private)/coach/dashboard/page.js"
+    ],
+    "/(private)/coach/program-enrollment/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(private)/coach/program-enrollment/page.css",
+      "static/chunks/app/(private)/coach/program-enrollment/page.js"
+    ],
+    "/(private)/coach/timeslots/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(private)/coach/timeslots/page.css",
+      "static/chunks/app/(private)/coach/timeslots/page.js"
+    ],
+    "/(public)/details/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(public)/details/page.css",
+      "static/chunks/app/(public)/details/page.js"
+    ],
+    "/(public)/checkout/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(public)/checkout/page.css",
+      "static/chunks/app/(public)/checkout/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
+    ]
+  }
+}

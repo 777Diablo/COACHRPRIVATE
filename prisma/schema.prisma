@@ -1,0 +1,378 @@
+// This is your Prisma schema file for MongoDB
+// Learn more about MongoDB support in Prisma here: https://pris.ly/d/mongodb
+
+
+//admin can assign some slots
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// Necessary for Next auth
+model Account {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String   @db.ObjectId
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model User {
+  // Primary Key
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  // Personal Information
+  name          String
+  email         String    @unique
+  mobile        String?   @unique
+  password      String?
+  emailVerified DateTime?
+  image         String?
+  dateOfBirth   DateTime?
+  gender        String?
+
+  // Role & Authentication
+  role     ROLE      @default(user)
+  accounts Account[]
+
+  // Additional Profile Information
+  city                 String? // User's city
+  country              String? // User's country
+  linkedin             String? // LinkedIn profile link
+  highestQualification String? // Highest educational qualification
+  college              String? // College/University attended
+  passingYear          String? // Year of passing
+  specialization       String? // Specialization in studies
+
+  // Career Information
+  currentJobRole    String? // User's current job role
+  yearsOfExperience Int? // Total years of work experience
+  industry          String? // Industry in which user works
+  currentEmployer   String? // Current employer name
+  previousRoles     String? // Previous job roles
+  careerObjectives  String? // Career objectives and aspirations
+
+  // Career Goals
+  preferredJobRole String? // Job roles the user is looking for
+  targetCompanies  String? // List of target companies
+  targetLocations  String? // Preferred job locations
+
+  // Certifications & Projects
+  certifications Cetification[] // List of certifications
+  projects       Projects[] // List of projects
+  resume         String? // Resume file URL
+
+  // Salary & Compensation
+  currentSalary Int? // Current in-hand salary
+  currentCTC    Int? // Current Cost-to-Company (CTC)
+  expectedCTC   Int? // Expected CTC
+
+  // Skills & Expertise
+  functionalExpertise String? // Functional areas of expertise
+  expertiseDetails    String? // Detailed expertise areas
+  improvementAreas    String? // Areas needing improvement
+  strengths           String? // Key strengths
+  weaknesses          String? // Weaknesses
+
+  // Challenges & Instructions
+  careerChallenges    String? // Challenges faced in career
+  interviewChallenges String? // Challenges faced in interviews
+  resumeInstructions  String? // Special resume instructions
+
+  // Timestamps
+  createdAt DateTime  @default(now()) // Automatically set when created
+  updatedAt DateTime  @updatedAt // Automatically updated on modification
+  lastLogin DateTime? // Last login timestamp
+  deletedAt DateTime? // Soft delete timestamp
+
+  // Account Status
+  isActive Boolean @default(true) // User active status
+
+  // Inquiries & Orders
+  Inquiry Inquiry[] // List of inquiries made by the user
+  orders  Order[]   @relation() // Orders where the user is the buyer
+
+  // Program Enrollments
+  programEnrollments         ProgramEnrollment[] // Enrollments in programs
+  assignedProgramEnrollments ProgramEnrollment[] @relation(name: "AssignedCoach") // Programs assigned as a coach
+
+  // Meeting Slots
+  MeetingSlot MeetingSlot[] @relation(name: "AssignedCoach") // Meeting slots assigned as a coach
+
+  // Psychometric Test Responses
+  PSITestResponse PsycometricTestResponse[] // Psychometric test responses
+}
+
+type Cetification {
+  name       String
+  issuer     String
+  issueDate  DateTime
+  expiration DateTime?
+}
+
+type Projects {
+  title       String
+  description String
+}
+
+enum ROLE {
+  admin
+  user
+  coach
+}
+
+model Otp {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String
+  otp       String
+  expiresAt Int
+}
+
+model VerificationToken {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// model Role {
+//   id          String   @id @default(auto()) @map("_id") @db.ObjectId
+//   name        String
+//   permissions String[]
+//   description String?
+//   user        User[]
+//   createdAt   DateTime @default(now())
+//   updatedAt   DateTime @updatedAt
+
+//   @@unique([name])
+// }
+
+model Query {
+  id        String   @id @default(cuid()) @map("_id")
+  name      String
+  email     String
+  phone     String
+  createdAt DateTime @default(now())
+}
+
+model Program {
+  id                 String        @id @default(auto()) @map("_id") @db.ObjectId
+  code               String        @unique
+  name               String
+  type               ProgramType
+  description        String        @default("")
+  longDescription    String        @default("")
+  status             ProgramStatus @default(Active)
+  createdAt          DateTime      @default(now()) // Creation timestamp
+  updatedAt          DateTime      @updatedAt
+  highlights         String[]      @default([])
+  features           Json[]        @default([])
+  includePsycometric Boolean       @default(false)
+
+  // new fields
+  // whyChooseAttributes  WhyChooseAttribute[]
+  // programType          AvailableTypes
+
+  // Pricing details
+  basePrice  Float
+  discount   Float?
+  totalPrice Float
+
+  inquiry            Inquiry[]
+  orderItems         OrderItem[]
+  programEnrollments ProgramEnrollment[]
+}
+
+// enum AvailableTypes {
+//   ONLINE_ONLY
+//   IN_PERSON_ONLY
+//   HYBRID
+// }
+
+// type WhyChooseAttribute {
+//   id          String 
+//   title       String
+//   description String
+// }
+
+enum ProgramStatus {
+  Active
+  Inactive
+}
+
+model Inquiry {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  name   String
+  email  String
+  mobile String
+
+  userId String? @db.ObjectId
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  programId String  @db.ObjectId
+  program   Program @relation(fields: [programId], references: [id], onDelete: Restrict)
+
+  message String        @default("")
+  status  InquiryStatus @default(Pending)
+
+  createdAt DateTime @default(now()) // Creation timestamp
+  updatedAt DateTime @updatedAt
+}
+
+enum InquiryStatus {
+  Pending
+  Open
+  Closed
+}
+
+model Order {
+  id            String        @id @default(auto()) @map("_id") @db.ObjectId
+  userId        String        @db.ObjectId
+  user          User          @relation(fields: [userId], references: [id])
+  totalPrice    Float
+  status        OrderStatus
+  items         OrderItem[]
+  paymentStatus PaymentStatus @default(PENDING)
+  paymentMethod PaymentMethod
+  razorpay_payment_id String?
+  razorpay_order_id String?
+  razorpay_signature String?
+  paymentId     String? // External payment ID
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+model OrderItem {
+  id           String             @id @default(auto()) @map("_id") @db.ObjectId
+  orderId      String             @db.ObjectId
+  order        Order              @relation(fields: [orderId], references: [id])
+  programId    String             @db.ObjectId
+  program      Program            @relation(fields: [programId], references: [id])
+  enrollmentId String?            @db.ObjectId
+  enrollment   ProgramEnrollment? @relation(fields: [enrollmentId], references: [id])
+  price        Float
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+}
+
+model ProgramEnrollment {
+  id                 String                  @id @default(auto()) @map("_id") @db.ObjectId
+  userId             String                  @db.ObjectId
+  user               User                    @relation(fields: [userId], references: [id])
+  programId          String                  @db.ObjectId
+  program            Program                 @relation(fields: [programId], references: [id])
+  status             ParticipationStatus
+  type               ProgramType
+  includePsycometric Boolean                 @default(false)
+  assignedCoach      String?                 @db.ObjectId
+  coach              User?                   @relation("AssignedCoach", fields: [assignedCoach], references: [id])
+  recordingUrl       String?
+  meetingUrl         String?
+  scheduledAt        DateTime?
+  duration           Int?
+  feedback           String?
+  score              Int?
+  createdAt          DateTime                @default(now())
+  updatedAt          DateTime                @updatedAt
+
+  orderItems         OrderItem[]             // <== changed from singular
+  meetingSlot        MeetingSlot[]
+  PsycometricTestResponse PsycometricTestResponse[]
+}
+
+
+model MeetingSlot {
+  id                  String             @id @default(auto()) @map("_id") @db.ObjectId
+  startTime           DateTime
+  endTime             DateTime
+  duration            Int // In minutes
+  coachId             String             @db.ObjectId
+  coach               User               @relation(name: "AssignedCoach", fields: [coachId], references: [id])
+  // userId              String?            @db.ObjectId
+  // meetingLink         String?
+  // user                User?              @relation(fields: [userId], references: [id])
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
+  programEnrollmentId String?             @db.ObjectId
+  ProgramEnrollment   ProgramEnrollment? @relation(fields: [programEnrollmentId], references: [id])
+}
+
+model Question {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  duration Int // Change to Int if this represents a numeric duration
+  tags     String[] // Use String[] if tags are meant to be a list
+}
+
+model PsycometricTestResponse {
+  id                  String            @id @default(auto()) @map("_id") @db.ObjectId
+  userId              String            @db.ObjectId
+  user                User              @relation(fields: [userId], references: [id])
+  programEnrollmentId String            @db.ObjectId
+  programEnrollment   ProgramEnrollment @relation(fields: [programEnrollmentId], references: [id])
+  testType            TestType
+  outcome             String
+  result              Json
+  responses           Json // Stores user answers in flexible JSON format
+  createdAt           DateTime          @default(now())
+}
+
+enum TestType {
+  PSI
+  RSI
+  DISC
+}
+
+enum ProgramType {
+  interview
+  video_based_interview
+  video_call_interview
+}
+
+enum OrderStatus {
+  PENDING
+  COMPLETED
+  CANCELLED
+  FAILED
+}
+
+enum ParticipationStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCESS
+  FAILED
+  REFUNDED
+}
+
+enum PaymentMethod {
+  CARD
+  UPI
+  NETBANKING
+  WALLET
+  RAZORPAY
+}

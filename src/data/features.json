@@ -1,0 +1,48 @@
+{
+  "title": "Core Features",
+  "subtitle": "Comprehensive tools and services to polish your skills with mock interviews, psychometric tests, and real-time feedback.Enhancing your interview preparation journey with each step.",
+  "features": [
+    {
+      "id": 1,
+      "icon": "Users",  
+      "title": "1.Mock Interviews",
+      "description": "1:1 sessions with experienced professionals tailored to your industry and role"
+    },
+    {
+      "id": 2,
+      "icon": "Video",
+      "title": "2.Video-Based Interview",
+      "description": "Submit your interview recordings and receive detailed expert feedback"
+    },
+    {
+      "id": 3,
+      "icon": "Brain",
+      "title": "3.Psychometric Tests",
+      "description": "Scientifically validated assessments for insights into your personality and cognitive abilities"
+    },
+    {
+      "id": 4,
+      "icon": "MessageSquareLock",
+      "title": "4.Real-Time Feedback",
+      "description": "Get instant feedback on your performance to improve your interview skills quickly"
+    },
+    {
+      "id": 5,
+      "icon": "BookOpen",
+      "title": "5.Exclusive Resources",
+      "description": "Access premium study material and prep guides for all industries"
+    },
+    {
+      "id": 6,
+      "icon": "Target",
+      "title": "6.Personalized Coaching",
+      "description": "Receive 1:1 coaching from HR experts tailored to your career goals and aspirations"
+    }
+  ],
+  "cta": {
+    "text": "It only takes a few clicks to get started",
+    "buttonText": "Get started - it's free",
+    "buttonLink": "#",
+    "subText": "Free for 14 days, no credit card required."
+  }
+} 

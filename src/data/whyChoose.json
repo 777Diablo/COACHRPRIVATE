@@ -1,0 +1,56 @@
+{
+  "tagline": "One-Stop Solution",
+  "title": "Why Choose CoachR?",
+  "description": "We provide comprehensive interview preparation solutions that set you up for success",
+  "features": [
+    {
+      "id": 1,
+      "icon": "UserCheck",
+      "title": "Insight from experienced HR professionals",
+      "description": "Practice with experienced HR professionals from various industries in real interview settings"
+    },
+    {
+      "id": 2,
+      "icon": "UserPlus",
+      "title": "Individual Development Plan",
+      "description": "Create a personalized development roadmap based on your career goals. Tailored plans ensure focused growth and preparation"
+    },
+    {
+      "id": 3,
+      "icon": "Clock",
+      "title": "Fast & Actionable Feedback",
+      "description": "Receive detailed, actionable feedback to improve your interview or career performance"
+    },
+    {
+      "id": 4,
+      "icon": "Shield",
+      "title": "Psychometric & Behavioural Insights",
+      "description": "Understand yourself with psychometric analysis for better career alignment and leverage your strengths"
+    },
+    {
+      "id": 5,
+      "icon": "LayoutDashboard",
+      "title": " Personalized Learning Dashboard",
+      "description": "Access a dashboard tailored to your needs. Track progress, receive AI-driven interview tips, and get real-time feedback to improve your skills efficiently"
+    },
+    {
+      "id": 6,
+      "icon": "Award",
+      "title": " Master Interviews with Confidence",
+      "description": "Practice with real-world coding challenges, behavioral coaching, and expert guidance. Gain the confidence to excel in technical and HR interviews"
+    },
+    {
+      "id": 7,
+      "icon": "Route",
+      "title": " Tailored Learning Pathways",
+      "description": "Your journey, your way. From mock interviews to skill-building exercises, our programs adapt to your individual goals and needs"
+    },
+    {
+      "id": 8,
+      "icon": "Headset",
+      "title": " Dedicated Coaching Support",
+      "description": "One-on-one coaching by industry experts ensures you&apos;re not just prepared but confident"
+    }
+    
+  ]
+}

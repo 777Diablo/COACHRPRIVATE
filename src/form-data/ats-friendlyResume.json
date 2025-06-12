@@ -1,0 +1,178 @@
+{
+    "formName": "ATS-Friendly Resume Creation",
+    "formStructure": {
+      "basicDetails": {
+        "fullName": "",
+        "emailAddress": "",
+        "phoneNumber": "",
+        "dateOfBirth": "",
+        "gender": {
+          "type": "dropdown",
+          "options": ["Male", "Female", "Other"]
+        },
+        "linkedinProfileURL": {
+          "optional": true
+        },
+        "location": {
+          "type": "dropdown",
+          "country": "",
+          "state": ""
+        }
+      },
+      "educationalBackground": {
+        "highestQualification": {
+          "type": "dropdown"
+        },
+        "highestQualificationInstitution": "",
+        "specialization": {
+          "type": "dropdown"
+        },
+        "professionalCertifications": {
+          "type": "multipleEntry",
+          "optional": true
+        }
+      },
+      "professionalBackground": {
+        "yearsOfExperience": {
+          "type": "dropdown",
+          "options": ["< 1", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "> 20"]
+        },
+        "currentCompany": {
+          "optional": true
+        },
+        "currentGrossSalary": "",
+        "currentCTC": "",
+        "currentJobTitle": {
+          "optional": true
+        },
+        "currentRoleLevel": {
+          "type": "dropdown",
+          "options": [
+            "Individual Contributor (No direct reports)",
+            "Team Lead (Manages a small team)",
+            "Manager (Manages multiple teams)",
+            "Senior Manager (Oversees departments or large teams)",
+            "Function Manager (Leadership role with strategic responsibilities)",
+            "Business Owner/Entrepreneur",
+            "Student/Fresher",
+            "Other"
+          ],
+          "otherSpecify": ""
+        },
+        "currentIndustry": {
+          "type": "dropdown",
+          "options": [
+            "Information Technology & Software",
+            "Manufacturing & Heavy Engineering",
+            "Automotive & Auto Components",
+            "Oil, Gas & Energy",
+            "FMCG & Consumer Goods",
+            "Banking, Financial Services & Insurance (BFSI)",
+            "BPO & ITES",
+            "Retail & E-commerce",
+            "Pharmaceuticals & Healthcare",
+            "Telecommunications & Networking",
+            "Logistics, Supply Chain & Transportation",
+            "Consulting & Professional Services",
+            "Real Estate & Construction",
+            "Media, Advertising & Entertainment",
+            "Hospitality, Travel & Tourism",
+            "Education & EdTech",
+            "Legal & Compliance",
+            "Aerospace & Defense",
+            "Public Sector & Government",
+            "Agriculture & Agribusiness",
+            "Startups & Entrepreneurship",
+            "Non-Profit & Social Impact",
+            "Other"
+          ],
+          "otherSpecify": ""
+        },
+        "functionalExpertise": {
+          "type": "dropdown",
+          "options": [
+            "Operations",
+            "Production",
+            "Procurement",
+            "Logistics & Supply Chain",
+            "Sales & Marketing",
+            "Finance & Accounting",
+            "Human Resources Management",
+            "Information Technology (IT)",
+            "Quality Control & Process Improvement",
+            "Research & Development",
+            "Inventory & Warehouse Management",
+            "Data Analytics & Business Intelligence",
+            "Project & Program Management",
+            "Customer Success & Support",
+            "Technology & Product Development",
+            "Legal & Compliance",
+            "Hospital & Healthcare Administration",
+            "Medical Sales & Pharma Marketing",
+            "Biotechnology & Life Sciences",
+            "ESG & Corporate Social Responsibility",
+            "Safety Management",
+            "Security Management",
+            "Administration",
+            "Advertising & Media Planning",
+            "EdTech & Online Learning",
+            "Training & Corporate Learning Solutions",
+            "Other"
+          ],
+          "otherSpecify": ""
+        },
+        "detailOnFunctionalExpertise": "",
+        "previousRolesExperience": "",
+        "projectsHandled": {
+          "type": "multipleEntry",
+          "optional": true
+        }
+      },
+      "careerGoals": {
+        "targetIndustry": {
+          "type": "dropdown",
+          "options": [
+            "Information Technology & Software",
+            "Manufacturing & Heavy Engineering",
+            "Automotive & Auto Components",
+            "Oil, Gas & Energy",
+            "FMCG & Consumer Goods",
+            "Banking, Financial Services & Insurance (BFSI)",
+            "BPO & ITES",
+            "Retail & E-commerce",
+            "Pharmaceuticals & Healthcare",
+            "Telecommunications & Networking",
+            "Logistics, Supply Chain & Transportation",
+            "Consulting & Professional Services",
+            "Real Estate & Construction",
+            "Media, Advertising & Entertainment",
+            "Hospitality, Travel & Tourism",
+            "Education & EdTech",
+            "Legal & Compliance",
+            "Aerospace & Defense",
+            "Public Sector & Government",
+            "Agriculture & Agribusiness",
+            "Startups & Entrepreneurship",
+            "Non-Profit & Social Impact",
+            "Other"
+          ],
+          "otherSpecify": ""
+        },
+        "targetCompanyName": "",
+        "desiredJobRole": "",
+        "expectedCTC": "",
+        "jobLocationPreference": ""
+      },
+      "additionalInformation": {
+        "howDidYouHearAboutUs": {
+          "type": "dropdown",
+          "options": ["Website", "Social Media", "Referral", "Other"],
+          "otherSpecify": ""
+        },
+        "specificExpectationsForResumeCrafting": ""
+      },
+      "termsAgreement": {
+        "confirmDetails": false
+      }
+    }
+  }

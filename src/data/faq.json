@@ -1,0 +1,26 @@
+{
+  "title": "Questions & Answers",
+  "subtitle": "",
+  "faqs": [
+    {
+      "id": 1,
+      "question": "I have questions. How can I know more about a service?",
+      "answer": "To know more about a service, read service related FAQs or Contact Us."
+    },
+    {
+      "id": 2,
+      "question": "Can I upgrade from Standard to Premium?",
+      "answer": "Yes, upgrades are possible. Contact us at intervieweecoach@thecoachr.com or WhatsApp for details."
+    },
+    {
+      "id": 3,
+      "question": "There is an issue with the payment gateway. Whom to contact?",
+      "answer": "Contact us at intervieweecoach@thecoachr.com or WhatsApp with details of the problem faced by you. We will resolve it and confirm as early as possible."
+    }
+  ],
+  "cta": {
+    "text": "Have any questions?",
+    "linkText": "Get in Touch",
+    "link": "/contact"
+  }
+}
