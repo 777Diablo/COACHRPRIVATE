@@ -29,19 +29,24 @@ const LoginForm = () => {
 
   const [loading, setLoading] = React.useState(false);
 
-  // const cb =
   const searchParams = useSearchParams();
   const cb = searchParams.get("cb");
+
+
 
   const handleSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
       setLoading(true);
+
+      
+      console.log(cb)
       await signIn("user-login", {
         email: data.email,
         password: data.password,
         redirect: true,
         callbackUrl: cb ? cb : "/u",
       });
+
 
       
       setLoading(false);

@@ -1,35 +1,5 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
-    "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
-    ],
-    "/error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/error.css",
-      "static/chunks/app/error.js"
-    ],
-    "/(public)/signin/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(public)/signin/page.css",
-      "static/chunks/app/(public)/signin/page.js"
-    ],
-    "/(public)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(public)/layout.css",
-      "static/chunks/app/(public)/layout.js"
-    ],
     "/(private)/u/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -47,39 +17,41 @@
       "static/css/app/(private)/layout.css",
       "static/chunks/app/(private)/layout.js"
     ],
-    "/(private)/admin/(protected)/page": [
+    "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(private)/admin/(protected)/page.js"
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
-    "/(private)/admin/(protected)/layout": [
+    "/error": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(private)/admin/(protected)/layout.css",
-      "static/chunks/app/(private)/admin/(protected)/layout.js"
+      "static/css/app/error.css",
+      "static/chunks/app/error.js"
     ],
-    "/(private)/admin/(protected)/dashboard/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(private)/admin/(protected)/dashboard/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
     ],
-    "/(private)/admin/(protected)/coach/page": [
+    "/(public)/signin/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(private)/admin/(protected)/coach/page.css",
-      "static/chunks/app/(private)/admin/(protected)/coach/page.js"
+      "static/css/app/(public)/signin/page.css",
+      "static/chunks/app/(public)/signin/page.js"
+    ],
+    "/(public)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(public)/layout.css",
+      "static/chunks/app/(public)/layout.js"
     ],
     "/(private)/u/program/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/(private)/u/program/page.css",
       "static/chunks/app/(private)/u/program/page.js"
-    ],
-    "/(private)/u/program/[programId]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(private)/u/program/[programId]/page.css",
-      "static/chunks/app/(private)/u/program/[programId]/page.js"
     ],
     "/(private)/coach/page": [
       "static/chunks/webpack.js",
@@ -97,34 +69,33 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(private)/coach/dashboard/page.js"
     ],
-    "/(private)/coach/program-enrollment/page": [
+    "/(private)/admin/(protected)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(private)/coach/program-enrollment/page.css",
-      "static/chunks/app/(private)/coach/program-enrollment/page.js"
+      "static/chunks/app/(private)/admin/(protected)/page.js"
     ],
-    "/(private)/coach/timeslots/page": [
+    "/(private)/admin/(protected)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(private)/coach/timeslots/page.css",
-      "static/chunks/app/(private)/coach/timeslots/page.js"
+      "static/css/app/(private)/admin/(protected)/layout.css",
+      "static/chunks/app/(private)/admin/(protected)/layout.js"
     ],
-    "/(public)/details/page": [
+    "/(private)/admin/(protected)/dashboard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(public)/details/page.css",
-      "static/chunks/app/(public)/details/page.js"
+      "static/chunks/app/(private)/admin/(protected)/dashboard/page.js"
     ],
-    "/(public)/checkout/page": [
+    "/(private)/admin/(protected)/user/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(public)/checkout/page.css",
-      "static/chunks/app/(public)/checkout/page.js"
+      "static/css/app/(private)/admin/(protected)/user/page.css",
+      "static/chunks/app/(private)/admin/(protected)/user/page.js"
     ],
-    "/_not-found/page": [
+    "/(private)/admin/(protected)/program-enrollment/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/css/app/(private)/admin/(protected)/program-enrollment/page.css",
+      "static/chunks/app/(private)/admin/(protected)/program-enrollment/page.js"
     ]
   }
 }

@@ -285,7 +285,7 @@ model ProgramEnrollment {
   type               ProgramType
   includePsycometric Boolean                 @default(false)
   assignedCoach      String?                 @db.ObjectId
-  coach              User?                   @relation("AssignedCoach", fields: [assignedCoach], references: [id])
+  coach              User?                   @relation(name: "AssignedCoach", fields: [assignedCoach], references: [id])
   recordingUrl       String?
   meetingUrl         String?
   scheduledAt        DateTime?

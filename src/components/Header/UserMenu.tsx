@@ -24,6 +24,8 @@ const UserMenu = ({ user }: { user: Session["user"] }) => {
     window.location.href = "/";
   };
 
+  console.log(user?.role);
+
   return (
     <Popover>
       <PopoverTrigger>
@@ -46,6 +48,8 @@ const UserMenu = ({ user }: { user: Session["user"] }) => {
           <div className="text-sm">{user?.name}</div>
           <div className="text-sm">{user?.email}</div>
         </div>
+
+        
 
         {user?.role === "admin" && <Link href="/admin">Admin Dashboard</Link>}
         {user?.role === "user" && <Link href="/u">Dashboard</Link>}
